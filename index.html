@@ -21,6 +21,7 @@ p {
   text-align: center;
   font-size: 36px;
   margin-top:0px;
+  font-family: 'Lato', sans-serif;
 }
 
 #percent{
@@ -33,18 +34,14 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-  
-  #demo{
-    font-family: 'Lato', sans-serif;
-  }
 </style>
 </head>
 <body>
 
-<div id =content>
-<h1>DSI Thesis Show Countdown</h1>
+<div id ='content'>
+<h1 id='thesis-countdown'></h1>
 <p id="demo"></p>
-<h1 id = 'degree'>Degree Completed</h1>
+<h1 id = 'degree'></h1>
 <p id='percent'></p>
 </div>
 <script>
@@ -75,6 +72,7 @@ var x = setInterval(function() {
 var loading = '\u2591';
 var loaded = '\u2593';
     //percentage count
+    document.getElementById('thesis-countdown').innerHTML =  'DSI Thesis Show Countdown';
 
     document.getElementById('degree').innerHTML =  "Degree Completed: " + Math.floor((programDuration - days)/programDuration * 10000)/100 + '%';
     document.getElementById('percent').innerHTML =  loaded.repeat(Math.floor((programDuration - days)/programDuration * 10)) + loading.repeat(Math.floor((days)/programDuration * 10));
@@ -85,6 +83,7 @@ var loaded = '\u2593';
         document.getElementById("demo").innerHTML = "We did it!";
     }
 }, 1000);
+
 </script>
 
 </body>
