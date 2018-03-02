@@ -68,7 +68,7 @@ var loaded = '\u2593';
     //percentage count
     document.getElementById('thesis-countdown').innerHTML =  'DSI Thesis Show Countdown';
     document.getElementById('degree').innerHTML =  "Degree Completed: " + Math.floor((programDuration - days)/programDuration * 10000)/100 + '%';
-    document.getElementById('percent').innerHTML =  loaded.repeat(Math.floor((programDuration - days)/programDuration * 10)) + loading.repeat(Math.floor((days)/programDuration * 10));
+    document.getElementById('percent').innerHTML =  loaded.repeat(Math.floor((programDuration - days)/programDuration * 10)) + loading.repeat(Math.ceil((days)/programDuration * 10));
     // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
